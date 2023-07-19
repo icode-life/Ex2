@@ -11,7 +11,9 @@ public class UnitTest1
     {
         //arrange
         Bakery bakery = new Bakery();
-        bakery.GetCashRegisterAmount = 2.3F;
+        //error setting the value 
+        bakery.CashRegisterAmount = 2.3F;
+        //error getting the value
         float expected = bakery.CashRegisterAmount;
 
         //act
@@ -26,11 +28,28 @@ public class UnitTest1
         //arrange
         Bakery bakery = new Bakery();
         float expected = 1.1F;
+        float actual;
 
         //act
         bakery.SellBaguette();
+        actual = bakery.GetCashRegisterAmount();
 
         //assert
-        float actual = bakery.GetCashRegisterAmount();
+        Assert.AreEqual(expected, actual, 0.01);
+    }
+
+    public void TestSellBread()
+    {
+        //arrange
+        Bakery bakery = new();
+        float expected = 2.6F;
+        float actual;
+
+        //act
+        bakery.SellBread();
+        actual = (float)bakery.GetCashRegisterAmount();
+
+        //assert
+        Assert.AreEqual(expected, actual, 0.01);
     }
 }
