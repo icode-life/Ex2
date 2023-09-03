@@ -49,6 +49,9 @@
                             Thread.Sleep(3000);
                             Environment.Exit(1);
                             break;
+                        default:
+                            Console.WriteLine("\nLe choix encodé n'est pas reconnu, veuillez réessayer.\n");
+                            break;
                     }
                 }
             } while (true);
