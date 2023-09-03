@@ -27,7 +27,7 @@
             do
             {
                 Console.WriteLine("Veuillez tapez le numéro de votre choix:\n1) vente: baguette\n2) vente: pain\n3) consulter le produit des ventes\n4) exit");
-                userPick = Console.ReadLine();
+                userPick = Console.ReadLine() ?? "";
                 if (!Int32.TryParse(userPick, out _) || !Enum.TryParse(userPick, out userChoice))
                 {
                     Console.WriteLine("\nLe choix encodé n'est pas reconnu comme nombre entier, veuillez réessayer.\n");
