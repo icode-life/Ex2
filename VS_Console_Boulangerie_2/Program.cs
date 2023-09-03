@@ -37,8 +37,7 @@
                 }
             } while (userPick != "4");
 
-            Console.WriteLine(@"Merci d'avoir utilisé BakeryMgmtApp
-Nous vous souhaitons une excellente journée!");
+            Console.WriteLine("Merci d'avoir utilisé BakeryMgmtApp!\nNous vous souhaitons une excellente journée!");
 
             //ajout d'un readLine pour laisser le temps de lecture avant exit
             Console.ReadLine();
