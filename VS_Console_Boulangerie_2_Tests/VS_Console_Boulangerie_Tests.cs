@@ -11,9 +11,10 @@ public class UnitTest1
         //arrange
         Bakery bakery = new Bakery();
         //error setting the value 
-        bakery.CashRegisterAmount = 2.3F;
+        //*** You are not allowed to access bakery cash register amount ***
+        //bakery.CashRegisterAmount = 2.3F;
         //error getting the value
-        float expected = bakery.CashRegisterAmount;
+        float expected = bakery.GetCashRegisterAmount();
 
         //act
         float actual = bakery.GetCashRegisterAmount();
