@@ -9,13 +9,13 @@ public class UnitTest1
     {
         //arrange
         Bakery bakery = new Bakery();
-        float expected = bakery.GetCashRegisterAmount();
+        decimal expected = bakery.GetCashRegisterAmount();
 
         //act
-        float actual = bakery.GetCashRegisterAmount();
+        decimal actual = bakery.GetCashRegisterAmount();
 
         //assert
-        Assert.Equal(expected, actual, 0.01);
+        Assert.Equal(expected, actual);
     }
 
 
@@ -24,15 +24,15 @@ public class UnitTest1
     {
         //arrange
         Bakery bakery = new Bakery();
-        float expected = 1.1F;
-        float actual;
+        decimal expected = 1.1m;
+        decimal actual;
 
         //act
         bakery.SellBaguette();
         actual = bakery.GetCashRegisterAmount();
 
         //assert
-        Assert.Equal(expected, actual, 0.01);
+        Assert.Equal(expected, actual);
     }
 
 
@@ -41,14 +41,14 @@ public class UnitTest1
     {
         //arrange
         Bakery bakery = new();
-        float expected = 2.6F;
-        float actual;
+        decimal expected = 2.6m;
+        decimal actual;
 
         //act
         bakery.SellBread();
-        actual = (float)bakery.GetCashRegisterAmount();
+        actual = bakery.GetCashRegisterAmount();
 
         //assert
-        Assert.Equal(expected, actual, 0.01);
+        Assert.Equal(expected, actual);
     }
 }
