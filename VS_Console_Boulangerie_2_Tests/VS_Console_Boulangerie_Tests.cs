@@ -1,5 +1,4 @@
 ﻿using VS_Console_Boulangerie_Niv2;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace VS_Console_Boulangerie_Niv2;
 
@@ -20,7 +19,7 @@ public class UnitTest1
         float actual = bakery.GetCashRegisterAmount();
 
         //assert
-        Assert.AreEqual(expected, actual, 0.01);
+        Assert.Equal(expected, actual, 0.01);
     }
         
     public void TestSellBaguette()
@@ -35,7 +34,7 @@ public class UnitTest1
         actual = bakery.GetCashRegisterAmount();
 
         //assert
-        Assert.AreEqual(expected, actual, 0.01);
+        Assert.Equal(expected, actual, 0.01);
     }
 
     public void TestSellBread()
@@ -50,6 +49,6 @@ public class UnitTest1
         actual = (float)bakery.GetCashRegisterAmount();
 
         //assert
-        Assert.AreEqual(expected, actual, 0.01);
+        Assert.Equal(expected, actual, 0.01);
     }
 }
