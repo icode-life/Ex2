@@ -22,15 +22,10 @@
                 {
                     case "1":
                         bakery.SellBaguette();
-                        //debug purposes
-
-                        Console.WriteLine($"{bakery.GetCashRegisterAmount()}");
                         break;
 
                     case "2":
                         bakery.SellBread();
-                        //debug
-                        Console.WriteLine($"{bakery.GetCashRegisterAmount()}");
                         break;
 
                     case "3":
