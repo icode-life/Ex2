@@ -21,14 +21,18 @@
             Bakery bakery = new Bakery();
             Console.WriteLine("Bonjour,\nBienvenue dans l'application Backery mgmt app!");
 
-            UserChoice userChoice = UserChoice.UNASSIGNED;
+            UserChoice userChoice;
 
             //démarrage de la boucle
             do
             {
                 Console.WriteLine("Veuillez tapez le numéro de votre choix:\n1) vente: baguette\n2) vente: pain\n3) consulter le produit des ventes\n4) exit");
                 userPick = Console.ReadLine();
-                if (Enum.TryParse(userPick, out userChoice))
+                if (!Int32.TryParse(userPick, out _) || !Enum.TryParse(userPick, out userChoice))
+                {
+                    Console.WriteLine("\nLe choix encodé n'est pas reconnu comme nombre entier, veuillez réessayer.\n");
+                }
+                else
                 {
                     switch (userChoice)
                     {
