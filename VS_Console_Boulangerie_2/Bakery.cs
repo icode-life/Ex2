@@ -8,13 +8,11 @@ namespace VS_Console_Boulangerie_Niv2
 
         public void SellBaguette()
         {
-            Console.WriteLine("Vente d'une baguette enregistrée\n\n");
             CashRegisterAmount += 1.1F;
         }
 
         public void SellBread()
         {
-            Console.WriteLine("Vente d'un pain enregistrée\n\n");
             CashRegisterAmount += 2.6F;
         }
 
