@@ -5,15 +5,10 @@ namespace VS_Console_Boulangerie_Niv2;
 public class UnitTest1
 {
     [Fact]
-
     public void TestGetCashRegisterAmount()
     {
         //arrange
         Bakery bakery = new Bakery();
-        //error setting the value 
-        //*** You are not allowed to access bakery cash register amount ***
-        //bakery.CashRegisterAmount = 2.3F;
-        //error getting the value
         float expected = bakery.GetCashRegisterAmount();
 
         //act
@@ -22,7 +17,9 @@ public class UnitTest1
         //assert
         Assert.Equal(expected, actual, 0.01);
     }
-        
+
+
+    [Fact]
     public void TestSellBaguette()
     {
         //arrange
@@ -38,6 +35,8 @@ public class UnitTest1
         Assert.Equal(expected, actual, 0.01);
     }
 
+
+    [Fact]
     public void TestSellBread()
     {
         //arrange
