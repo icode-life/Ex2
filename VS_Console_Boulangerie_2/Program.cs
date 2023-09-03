@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             //initialisation variables pour le total des ventes et le choix de l'utilisateur
             string userPick;
