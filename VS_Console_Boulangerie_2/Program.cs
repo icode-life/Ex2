@@ -46,8 +46,7 @@
 
                         case UserChoice.QUIT:
                             Console.WriteLine("Merci d'avoir utilisé BakeryMgmtApp!\nNous vous souhaitons une excellente journée!");
-                            //ajout d'un readLine pour laisser le temps de lecture avant exit
-                            Console.ReadLine();
+                            Thread.Sleep(3000);
                             Environment.Exit(1);
                             break;
                     }
