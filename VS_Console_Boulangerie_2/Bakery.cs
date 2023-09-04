@@ -4,21 +4,19 @@ namespace VS_Console_Boulangerie_Niv2
 {
     public class Bakery
     {
-        private float CashRegisterAmount { get; set; } = 0;
+        private decimal CashRegisterAmount { get; set; } = 0;
 
         public void SellBaguette()
         {
-            Console.WriteLine("Vente d'une baguette enregistrée\n\n");
-            CashRegisterAmount += 1.1F;
+            CashRegisterAmount += 1.1m;
         }
 
         public void SellBread()
         {
-            Console.WriteLine("Vente d'un pain enregistrée\n\n");
-            CashRegisterAmount += 2.6F;
+            CashRegisterAmount += 2.6m;
         }
 
-        public float GetCashRegisterAmount()
+        public decimal GetCashRegisterAmount()
         {
             return CashRegisterAmount;
         }

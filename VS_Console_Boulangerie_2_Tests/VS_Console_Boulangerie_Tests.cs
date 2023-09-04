@@ -1,55 +1,54 @@
 ﻿using VS_Console_Boulangerie_Niv2;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace VS_Console_Boulangerie_Niv2;
 
 public class UnitTest1
 {
     [Fact]
-
     public void TestGetCashRegisterAmount()
     {
         //arrange
         Bakery bakery = new Bakery();
-        //error setting the value 
-        bakery.CashRegisterAmount = 2.3F;
-        //error getting the value
-        float expected = bakery.CashRegisterAmount;
+        decimal expected = bakery.GetCashRegisterAmount();
 
         //act
-        float actual = bakery.GetCashRegisterAmount();
+        decimal actual = bakery.GetCashRegisterAmount();
 
         //assert
-        Assert.AreEqual(expected, actual, 0.01);
+        Assert.Equal(expected, actual);
     }
-        
+
+
+    [Fact]
     public void TestSellBaguette()
     {
         //arrange
         Bakery bakery = new Bakery();
-        float expected = 1.1F;
-        float actual;
+        decimal expected = 1.1m;
+        decimal actual;
 
         //act
         bakery.SellBaguette();
         actual = bakery.GetCashRegisterAmount();
 
         //assert
-        Assert.AreEqual(expected, actual, 0.01);
+        Assert.Equal(expected, actual);
     }
 
+
+    [Fact]
     public void TestSellBread()
     {
         //arrange
         Bakery bakery = new();
-        float expected = 2.6F;
-        float actual;
+        decimal expected = 2.6m;
+        decimal actual;
 
         //act
         bakery.SellBread();
-        actual = (float)bakery.GetCashRegisterAmount();
+        actual = bakery.GetCashRegisterAmount();
 
         //assert
-        Assert.AreEqual(expected, actual, 0.01);
+        Assert.Equal(expected, actual);
     }
 }
